@@ -1,0 +1,28 @@
+
+<div *ngIf="!isOnline" style="background: #ff9800; color: white; padding: 10px; text-align: center; font-weight: bold;">
+  ⚠️ Вы в оффлайн-режиме. Показываем кэшированные данные.
+</div>
+
+
+<div class="ngrx-dev-tools" style="background: #2c3e50; color: white; padding: 10px; display: flex; gap: 10px; align-items: center;">
+  <button (click)="testStore()" style="background: #3498db; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+    Test NgRx Action
+  </button>
+  
+  <button (click)="checkStore()" style="background: #27ae60; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+    Check Store State
+  </button>
+  
+  <button (click)="clearStore()" style="background: #e74c3c; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+    Clear
+  </button>
+  
+  <span style="margin-left: auto; font-size: 12px;">
+    Status: {{ isOnline ? '🟢 Online' : '🔴 Offline' }}
+  </span>
+</div>
+
+<app-navbar></app-navbar>
+<main>
+  <router-outlet></router-outlet>
+</main>
